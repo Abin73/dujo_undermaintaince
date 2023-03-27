@@ -1,26 +1,22 @@
 
-import 'package:dujo_website/view/pages/Login/Admin/adminMain_panel.dart';
-import 'package:dujo_website/view/pages/Login/Admin/classes_section/add_classes.dart';
-import 'package:dujo_website/view/pages/web/admin/admin_pannel_main.dart';
 import 'package:dujo_website/view/pages/web/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
-import '../admin/fees_bills.dart';
-import '../widgets/custom_blue_button.dart';
+import '../../../web/widgets/custom_blue_button.dart';
 
-class SubjectTeacher extends StatefulWidget {
-  const SubjectTeacher({super.key});
+class AdminClasses extends StatefulWidget {
+  const AdminClasses({super.key});
 
   @override
-  State<SubjectTeacher> createState() => _SubjectTeacherState();
+  State<AdminClasses> createState() => _AdminClassesState();
 }
 
-class _SubjectTeacherState extends State<SubjectTeacher> {
+class _AdminClassesState extends State<AdminClasses> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: AppBar(title: Text('Teacher Subjects ')),
+        appBar: AppBar(title: Text('Admin Class')),
         backgroundColor: Color(0xFF26A69A),
         body: SingleChildScrollView(
           child: Column(
@@ -37,7 +33,7 @@ class _SubjectTeacherState extends State<SubjectTeacher> {
                       //decoration:
 
                       child: Text(
-                        "Teachers Subjects List",
+                        "Admin Dashboard",
                         style: TextStyle(
                             color: Colors.red,
                             fontSize: 20,
@@ -103,11 +99,11 @@ class _SubjectTeacherState extends State<SubjectTeacher> {
                               child: CustomBlueButton(
                                 text: 'LKG',
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => FeesBills()),
-                                  );
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(
+                                  //       builder: (context) => FeesBills()),
+                                  // );
                                 },
                               )),
                           SizedBox(
@@ -119,11 +115,11 @@ class _SubjectTeacherState extends State<SubjectTeacher> {
                               child: CustomBlueButton(
                                 text: 'UKG',
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => FeesBills()),
-                                  );
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(
+                                  //       builder: (context) => FeesBills()),
+                                  // );
                                 },
                               )),
                           SizedBox(
@@ -249,12 +245,12 @@ class _SubjectTeacherState extends State<SubjectTeacher> {
                           SizedBox(
                             height: 10,
                           ),
-                        ])
-                        ),
+                        ])),
                   ),
                   SizedBox(
                     width: 30,
                   ),
+
                   Padding(
                     padding: const EdgeInsets.only(top: 30, bottom: 30),
                     child: Container(
@@ -278,18 +274,18 @@ class _SubjectTeacherState extends State<SubjectTeacher> {
                         child: Column(children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => AddClasses(id: ''),
-                                  ));
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //       builder: (context) => AddClasses(),
+                              //     ));
                             },
                             child: Container(
                                 height: screenSize.width * 1 / 12,
                                 width: screenSize.width * 1 / 4,
                                 child: CustomButton(
-                                  text: 'Current Classes', onTap: () {  },
-                               
+                                  text: 'Create Classes', onTap: () {  },
+                                    
                                 )),
                           ),
                           SizedBox(
@@ -297,20 +293,18 @@ class _SubjectTeacherState extends State<SubjectTeacher> {
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => AdminPage(
-                                      id: '',
-                                    ),
-                                  ));
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //       builder: (context) => AdminPage(),
+                              //     ));
                             },
                             child: Container(
                                 height: screenSize.width * 1 / 12,
                                 width: screenSize.width * 1 / 4,
                                 child: CustomButton(
-                                  text: '', onTap: () {},
-               
+                                  text: 'Edit Classes',
+                                  onTap: () {}, 
                                 )),
                           ),
                           SizedBox(
@@ -318,24 +312,131 @@ class _SubjectTeacherState extends State<SubjectTeacher> {
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => AdminPage(
-                                      id: '',
-                                    ),
-                                  ));
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //       builder: (context) => AdminPage(),
+                              //     ));
                             },
                             child: Container(
                                 height: screenSize.width * 1 / 12,
                                 width: screenSize.width * 1 / 4,
                                 child: CustomButton(
-                                  text: '', onTap: () {  },
-                        
+                                  text: 'Remove Classes',
+                                  onTap: () {},
                                 )),
                           ),
                         ])),
                   ),
+                  SizedBox(
+                    width: 30,
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30, bottom: 30),
+                    child: Container(
+                        width: screenSize.width * 1 / 3.5,
+                        height: screenSize.width * 1 / 2.09,
+                        // height: screenSize.width * 1 / 4,
+                        //color: Colors.blue,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(40),
+                          gradient: LinearGradient(
+                              colors: [
+                                Color(0xFF26A69A),
+                                Color.fromARGB(255, 9, 49, 45),
+                              ],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter),
+                        ),
+                        padding: const EdgeInsets.only(
+                          top: 50,
+                        ),
+                        child: Column(children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 150),
+                            child: Container(
+                              height: screenSize.width * 1 / 30,
+                              width: screenSize.width * 1 / 6,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF26A69A),
+                                border: Border.all(
+                                    color: Color.fromARGB(255, 238, 238, 238)),
+                                borderRadius: BorderRadius.circular(25),
+                              ),
+                              child: DropdownButton(
+                                hint: Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Text(
+                                    "Select Class Division",
+                                    style: const TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                underline: const SizedBox(),
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                ),
+                                icon: const Padding(
+                                  padding: EdgeInsets.all(
+                                    13,
+                                  ),
+                                  child: Icon(Icons.arrow_drop_down,
+                                      size: 18, color: Colors.grey),
+                                ),
+                                isExpanded: true,
+                                items: [
+                                  "DIV A",
+                                  "DIV B",
+                                  "DIV C",
+                                  "DIV D",
+                                  "DIV E",
+                                  "DIV F",
+                                  "DIV G",
+                                  "DIV H",
+                                  "DIV I",
+                                  "DIV J",
+                                ].map(
+                                  (val) {
+                                    return DropdownMenuItem<String>(
+                                      value: val,
+                                      child: Text(val),
+                                    );
+                                  },
+                                ).toList(),
+                                onChanged: (val) {
+                                  setState(() {
+                                    var yourVar = val.toString();
+                                  });
+                                },
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 80,
+                          ),
+                          Container(
+                            height: screenSize.width * 1 / 18,
+                            width: screenSize.width * 1 / 5,
+                            // color: Colors.white,
+                            //child: const Center(child: Text('Class Details')),
+                            child: CustomBlueButton(
+                              text: 'Class Details',
+                              onPressed: () {},
+                            ),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                        ])),
+                  ),
+                  // CustomButton(
+                  //   text: 'teacher',
+                  //   onPressed: () {},
+                  // )
                 ],
               )
             ],

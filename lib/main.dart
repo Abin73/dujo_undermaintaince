@@ -1,3 +1,4 @@
+import 'package:dujo_website/view/pages/Login/Admin/adminMain_panel.dart';
 import 'package:dujo_website/view/pages/home/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         designSize: const Size(1536, 792),
         builder: (context, child) {
           return MaterialApp(
-              title: 'Flutter Demo',
+              title: 'DuJo Web',
               debugShowCheckedModeBanner: false,
               theme: ThemeData(
                 primaryColor: const Color(0xFF02BB9F),
@@ -39,7 +40,11 @@ class MyApp extends StatelessWidget {
                 // ignore: deprecated_member_use
                 accentColor: const Color(0xFF02BB9F),
               ),
-              home: const HomePage());
+              home: 
+             // AdminPage(id: null)
+              
+               HomePage()
+               );
         });
   }
 }

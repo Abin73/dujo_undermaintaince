@@ -1,26 +1,21 @@
-
 import 'package:dujo_website/view/pages/web/admin/dujo_admin_teacher_list.dart';
-import 'package:dujo_website/view/pages/web/admin/meeting_in.dart';
-
-
+import 'package:dujo_website/view/pages/web/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/custom_container.dart';
-
-class MeetingUpdates extends StatefulWidget {
-  const MeetingUpdates({super.key});
+class NoticeUpdates extends StatefulWidget {
+  const NoticeUpdates({super.key});
 
   @override
-  State<MeetingUpdates> createState() => _MeetingUpdatesState();
+  State<NoticeUpdates> createState() => _NoticeUpdatesState();
 }
 
-class _MeetingUpdatesState extends State<MeetingUpdates> {
+class _NoticeUpdatesState extends State<NoticeUpdates> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('MEETINGS'),
+        title: Text('NOTICES'),
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -31,17 +26,17 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminTeacherList(),
+                        ));
                   },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: ' Meeting Updates',
+                        text: 'Create Notice',
                         onTap: () {},
                       )),
                 ))),
@@ -52,14 +47,14 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MeetingCreates(),
+                          builder: (context) => AdminTeacherList(),
                         ));
                   },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Create  Meeting',
+                        text: 'Edit  Notice',
                         onTap: () {},
                       )),
                 ))),
@@ -67,17 +62,17 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminTeacherList(),
+                        ));
                   },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Remove Meeting',
+                        text: 'Remove  Notice',
                         onTap: () {},
                       )),
                 ))),

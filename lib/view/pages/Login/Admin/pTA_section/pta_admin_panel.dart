@@ -1,11 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dujo_website/model/pTA_section/add_PTAMemberModel.dart';
 import 'package:dujo_website/model/pTA_section/pta_category_model.dart';
 import 'package:dujo_website/view/pages/Login/Admin/pTA_section/add_PTAMembers.dart';
 import 'package:dujo_website/view/pages/Login/Admin/pTA_section/add_PTA_Category.dart';
-import 'package:dujo_website/view/pages/Login/Admin/pTA_section/sample.dart';
 import 'package:dujo_website/view/pages/web/widgets/custom_button.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,32 +25,39 @@ class _PtaMemberAdminState extends State<PtaMemberAdmin> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    border: Border.all(width: 2, color: Colors.white)),
-                height: 50,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      //decoration:
-
-                      child: Text(
+      appBar: AppBar(title: Text(
                         "PTA MEMBERS",
                         style: TextStyle(
                             color: Colors.red,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
-                      ),
-                    )
-                  ],
-                ),
-              ),
+                      ),),
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              // Container(
+              //   decoration: BoxDecoration(
+              //       color: Colors.blue,
+              //       border: Border.all(width: 2, color: Colors.white)),
+              //   height: 50,
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       Container(
+              //         //decoration:
+
+              //         child: Text(
+              //           "PTA MEMBERS",
+              //           style: TextStyle(
+              //               color: Colors.red,
+              //               fontSize: 20,
+              //               fontWeight: FontWeight.bold),
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
               Row(
                 children: [
                   Padding(
@@ -181,7 +185,7 @@ class _PtaMemberAdminState extends State<PtaMemberAdmin> {
                               height: screenSize.width * 1 / 10,
                               width: screenSize.width * 1 / 3.7,
                               child: CustomButton(
-                                text: "Create Members",
+                                text: "Create Members", onTap: () {  },
                               )
                               // color: Colors.red,
                               ),
@@ -207,7 +211,7 @@ class _PtaMemberAdminState extends State<PtaMemberAdmin> {
                                 height: screenSize.width * 1 / 10,
                                 width: screenSize.width * 1 / 3.7,
                                 child: CustomButton(
-                                  text: 'Create PTA Category',
+                                  text: 'Create PTA Category', onTap: () {  },
                                 ),
                                 // color: Colors.red,
                               ),
@@ -229,7 +233,7 @@ class _PtaMemberAdminState extends State<PtaMemberAdmin> {
                             height: screenSize.width * 1 / 10,
                             width: screenSize.width * 1 / 3.7,
                             child: CustomButton(
-                              text: 'Remove Members',
+                              text: 'Remove Members', onTap: () {  },
                             ),
                             // color: Colors.red,
                           ),

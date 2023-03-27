@@ -1,26 +1,23 @@
 
-import 'package:dujo_website/view/pages/web/admin/dujo_admin_teacher_list.dart';
-import 'package:dujo_website/view/pages/web/admin/meeting_in.dart';
-
-
+import 'package:dujo_website/view/pages/web/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 
-import '../widgets/custom_container.dart';
-
-class MeetingUpdates extends StatefulWidget {
-  const MeetingUpdates({super.key});
+class StudentProtectionGroup extends StatefulWidget {
+  const StudentProtectionGroup({super.key});
 
   @override
-  State<MeetingUpdates> createState() => _MeetingUpdatesState();
+  State<StudentProtectionGroup> createState() => _StudentProtectionGroupState();
 }
 
-class _MeetingUpdatesState extends State<MeetingUpdates> {
+class _StudentProtectionGroupState extends State<StudentProtectionGroup> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('MEETINGS'),
+        title: Text('Student Protection Group'),
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -34,56 +31,56 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                     // Navigator.push(
                     //     context,
                     //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
+                    //       builder: (context) => CounslingRoom(),
                     //     ));
                   },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: ' Meeting Updates',
+                        text: 'COUNSLING ROOM',
                         onTap: () {},
                       )),
                 ))),
             Padding(
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MeetingCreates(),
-                        ));
-                  },
+                  // onTap: () {
+                  //   Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => AdminTeacherList(),
+                  //       ));
+                  // },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Create  Meeting',
+                        text: 'Student Laws',
                         onTap: () {},
                       )),
                 ))),
             Padding(
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
-                  },
+                  // onTap: () {
+                  //   Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => AdminTeacherList(),
+                  //       ));
+                  // },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Remove Meeting',
+                        text: 'Remove ',
                         onTap: () {},
                       )),
                 ))),
           ],
         ),
-      ),
-    );
-  }
+     ),
+);
+}
 }

@@ -1,8 +1,6 @@
+import 'package:dujo_website/view/pages/web/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-import '../widgets/custom_button.dart';
 
 class FeesUpdates extends StatefulWidget {
   const FeesUpdates({super.key});

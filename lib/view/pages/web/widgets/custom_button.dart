@@ -5,7 +5,7 @@ class CustomButton extends StatelessWidget {
 
   CustomButton({
     Key? key,
-    required this.text,
+    required this.text, required Null Function() onTap,
   }) : super(key: key);
 
   @override

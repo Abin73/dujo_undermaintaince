@@ -165,7 +165,7 @@ class AdminClasses extends StatelessWidget {
                               height: screenSize.width * 1 / 12,
                               width: screenSize.width * 1 / 4,
                               child: CustomButton(
-                                text: 'Create Classes',
+                                text: 'Create Classes', onTap: () {  },
                              
                               )),
                         ),

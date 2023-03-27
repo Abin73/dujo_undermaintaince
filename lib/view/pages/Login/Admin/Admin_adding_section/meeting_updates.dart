@@ -1,11 +1,6 @@
-
 import 'package:dujo_website/view/pages/web/admin/dujo_admin_teacher_list.dart';
-import 'package:dujo_website/view/pages/web/admin/meeting_in.dart';
-
-
+import 'package:dujo_website/view/pages/web/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/custom_container.dart';
 
 class MeetingUpdates extends StatefulWidget {
   const MeetingUpdates({super.key});
@@ -31,11 +26,11 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminTeacherList(),
+                        ));
                   },
                   child: Container(
                       height: screenSize.width * 1 / 10,
@@ -52,7 +47,7 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MeetingCreates(),
+                          builder: (context) => AdminTeacherList(),
                         ));
                   },
                   child: Container(
@@ -67,11 +62,11 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AdminTeacherList(),
+                        ));
                   },
                   child: Container(
                       height: screenSize.width * 1 / 10,

@@ -1,26 +1,22 @@
-
-import 'package:dujo_website/view/pages/web/admin/dujo_admin_teacher_list.dart';
-import 'package:dujo_website/view/pages/web/admin/meeting_in.dart';
-
-
+import 'package:dujo_website/view/pages/web/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 
-import '../widgets/custom_container.dart';
-
-class MeetingUpdates extends StatefulWidget {
-  const MeetingUpdates({super.key});
+class StudentSummary extends StatefulWidget {
+  const StudentSummary({super.key});
 
   @override
-  State<MeetingUpdates> createState() => _MeetingUpdatesState();
+  State<StudentSummary> createState() => _StudentSummaryState();
 }
 
-class _MeetingUpdatesState extends State<MeetingUpdates> {
+class _StudentSummaryState extends State<StudentSummary> {
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
+ var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('MEETINGS'),
+        title: Text('Student Summary'),
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -30,60 +26,60 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
             Padding(
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
-                  },
+                  // onTap: () {
+                  //   Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => AdminTeacherList(),
+                  //       ));
+                  // },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: ' Meeting Updates',
+                        text: 'Create Summary',
                         onTap: () {},
                       )),
                 ))),
             Padding(
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MeetingCreates(),
-                        ));
-                  },
+                  // onTap: () {
+                  //   Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => AdminTeacherList(),
+                  //       ));
+                  // },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Create  Meeting',
+                        text: 'Edit Summary',
                         onTap: () {},
                       )),
                 ))),
             Padding(
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
-                  },
+                  // onTap: () {
+                  //   Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => AdminTeacherList(),
+                  //       ));
+                  // },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Remove Meeting',
+                        text: 'Remove Summary',
                         onTap: () {},
                       )),
                 ))),
           ],
         ),
-      ),
-    );
-  }
+     ),
+);
+}
 }

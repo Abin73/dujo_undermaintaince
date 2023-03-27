@@ -1,26 +1,25 @@
 
-import 'package:dujo_website/view/pages/web/admin/dujo_admin_teacher_list.dart';
-import 'package:dujo_website/view/pages/web/admin/meeting_in.dart';
-
-
+import 'package:dujo_website/view/pages/web/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 
-import '../widgets/custom_container.dart';
+import 'add_achivements.dart';
 
-class MeetingUpdates extends StatefulWidget {
-  const MeetingUpdates({super.key});
+class Achievements extends StatefulWidget {
+  const Achievements({super.key});
 
   @override
-  State<MeetingUpdates> createState() => _MeetingUpdatesState();
+  State<Achievements> createState() => _AchievementsState();
 }
 
-class _MeetingUpdatesState extends State<MeetingUpdates> {
+class _AchievementsState extends State<Achievements> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('MEETINGS'),
+        title: Text('Achievements'),
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -31,59 +30,59 @@ class _MeetingUpdatesState extends State<MeetingUpdates> {
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
-                  },
-                  child: Container(
-                      height: screenSize.width * 1 / 10,
-                      width: screenSize.width * 1 / 3,
-                      child: CustomContainer(
-                        text: ' Meeting Updates',
-                        onTap: () {},
-                      )),
-                ))),
-            Padding(
-                padding: const EdgeInsets.all(10),
-                child: (InkWell(
-                  onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MeetingCreates(),
+                          builder: (context) => AddAchievement(),
                         ));
                   },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Create  Meeting',
+                        text: 'Add Achievements',
                         onTap: () {},
                       )),
                 ))),
             Padding(
                 padding: const EdgeInsets.all(10),
                 child: (InkWell(
-                  onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => AdminTeacherList(),
-                    //     ));
-                  },
+                  // onTap: () {
+                  //   Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => AdminTeacherList(),
+                  //       ));
+                  // },
                   child: Container(
                       height: screenSize.width * 1 / 10,
                       width: screenSize.width * 1 / 3,
                       child: CustomContainer(
-                        text: 'Remove Meeting',
+                        text: 'Edit  Achievements',
+                        onTap: () {},
+                      )),
+                ))),
+            Padding(
+                padding: const EdgeInsets.all(10),
+                child: (InkWell(
+                  // onTap: () {
+                  //   Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         builder: (context) => AdminTeacherList(),
+                  //       ));
+                  // },
+                  child: Container(
+                      height: screenSize.width * 1 / 10,
+                      width: screenSize.width * 1 / 3,
+                      child: CustomContainer(
+                        text: 'Remove Acheivements',
                         onTap: () {},
                       )),
                 ))),
           ],
         ),
-      ),
-    );
-  }
+     ),
+);
+}
 }

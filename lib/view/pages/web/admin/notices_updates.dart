@@ -1,3 +1,4 @@
+import 'package:dujo_website/view/pages/web/admin/add_new_notices.dart';
 import 'package:dujo_website/view/pages/web/admin/dujo_admin_teacher_list.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,7 @@ class _NoticeUpdatesState extends State<NoticeUpdates> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => AdminTeacherList(),
+                          builder: (context) => AddNewNotices(),
                         ));
                   },
                   child: Container(
